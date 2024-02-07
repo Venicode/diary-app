@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_webapi_first_course/helpers/async.study.dart';
 import 'package:flutter_webapi_first_course/services/journal_service.dart';
 import 'screens/home_screen/home_screen.dart';
 
@@ -7,6 +8,7 @@ void main() {
   JournalService service = JournalService();
   service.register("Hello World");
   service.get();
+  asyncStudy();
 }
 
 class MyApp extends StatelessWidget {
