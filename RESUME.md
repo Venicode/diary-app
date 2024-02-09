@@ -12,6 +12,8 @@
     - PUT: Atualiza os dados já existentes (update).
     - DELETE: Deleta os dados.
 
+![alt text](image.png)
+
 ## RESPOSTA (RESPONSE) E STATUS CODE
 
 - Além da requisição, precisamos da resposta do nosso pedido, e dependendo da forma que solicitamos e do servidor, podemos obter vários tipos de respostas, onde utilizamos o status code para medir essa resposta:
@@ -22,7 +24,7 @@
     - Respostas de erro do cliente (400 a 499);
     - Respostas de erro do servidor (500 a 599).
 
-    ![alt text](image.png)
+![alt text](image-1.png)
 
 ## CRIANDO UMA REQUISIÇÃO GET
 
