@@ -1,4 +1,4 @@
-<i>Anotações com o que foi aprendido no curso da Alura: Flutter com WebAPI : Integrando sua aplicação </i>
+<i>Anotações com o que foi aprendido no curso da Alura: Flutter com WebAPI : Integrando sua aplicação. Além do artigo sobre HTTP com o exemplo de lista de filmes do Studi Ghibli </i>
 
 ## HTTP
 
@@ -39,3 +39,12 @@
 
 - E o response.body?
 - O body é tudo que contém no nosso arquivo JSON, pois os dados retornados pela API está em formato JSON.
+
+<i>Ler depois: https://www.alura.com.br/artigos/construtores-dart-tipos-como-usa-los </i>
+
+## CONVERTENDO JSON EM OBJETO
+
+- Para converter um json em um objeto, escrevemos o seguinte código:
+
+![alt text](image-3.png)
+
