@@ -13,7 +13,7 @@ class AddJournalScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-            "${WeekDay(journal.createdAt.weekday).long}, ${journal.createdAt.day} | ${journal.createdAt.month} | ${journal.createdAt.year}"),
+            WeekDay(journal.createdAt).toString()),
         actions: [
           IconButton(
               onPressed: () {
