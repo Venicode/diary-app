@@ -39,5 +39,6 @@ class AddJournalScreen extends StatelessWidget {
     JournalService service = JournalService();
     bool result = await service.register(journal);
     Navigator.pop(context, result);
+    
   }
 }

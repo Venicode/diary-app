@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_webapi_first_course/helpers/async.study.dart';
 import 'package:flutter_webapi_first_course/models/journal.dart';
 import 'package:flutter_webapi_first_course/screens/home_screen/add_journal_screen/add_journal_screen.dart';
 import 'package:flutter_webapi_first_course/services/journal_service.dart';
@@ -8,8 +7,8 @@ import 'screens/home_screen/home_screen.dart';
 void main() {
   runApp(const MyApp());
   JournalService service = JournalService();
-  service.register(Journal.empty());
-  asyncStudy();
+  //service.register(Journal.empty());
+  service.getAll();
 }
 
 class MyApp extends StatelessWidget {
@@ -42,13 +41,14 @@ class MyApp extends StatelessWidget {
                   updatedAt: DateTime.now()),
             ),
       },
-    onGenerateRoute: (settings) {
+    onGenerateRoute: (settings){
         if(settings.name == "add-journal") {
           final Journal journal = settings.arguments as Journal;
           return MaterialPageRoute(builder: (context) {
             return AddJournalScreen(journal: journal);
           });
         }
+        return null;
       },
     );
   }

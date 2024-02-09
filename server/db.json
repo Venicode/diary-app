@@ -4,58 +4,22 @@
   },
   "journals": [
     {
-      "id": "b8763cb0-c6b9-11ee-8ee2-312410bf4b98",
-      "content": "",
-      "created_At": "2024-02-08 19:39:06.111290",
-      "updated_At": "2024-02-08 19:39:06.111301"
-    },
-    {
       "id": "id",
-      "content": "Ola",
-      "created_At": "2024-02-08 19:39:11.649948",
-      "updated_At": "2024-02-08 19:39:11.649956"
-    },
-    {
-      "id": "2be07b60-c6bb-11ee-985a-a13bf767363a",
-      "content": "",
-      "created_At": "2024-02-08 19:49:29.244745",
-      "updated_At": "2024-02-08 19:49:29.244758"
-    },
-    {
-      "id": "id",
-      "content": "Hoje foi um dia legal",
-      "created_At": "2024-02-08 19:49:35.734202",
-      "updated_At": "2024-02-08 19:49:35.734210"
-    },
-    {
-      "id": "id",
-      "content": "Testando o snackbar",
-      "created_At": "2024-02-08 19:49:55.661133",
-      "updated_At": "2024-02-08 19:49:55.661154"
-    },
-    {
-      "id": "572fb640-c6bc-11ee-b46d-4d58eab43e57",
-      "content": "",
-      "created_At": "2024-02-08 19:57:51.400459",
-      "updated_At": "2024-02-08 19:57:51.400470"
+      "content": "Hoje e sexta",
+      "created_At": "2024-02-09 14:00:38.125375",
+      "updated_At": "2024-02-09 14:00:38.125384"
     },
     {
       "id": "id",
       "content": "Testando",
-      "created_At": "2024-02-08 19:57:57.248231",
-      "updated_At": "2024-02-08 19:57:57.248239"
-    },
-    {
-      "id": "7dd02b90-c6bc-11ee-8639-5750ca0c0f20",
-      "content": "",
-      "created_At": "2024-02-08 19:58:56.204985",
-      "updated_At": "2024-02-08 19:58:56.204995"
+      "created_At": "2024-02-09 14:28:34.701911",
+      "updated_At": "2024-02-09 14:28:34.701919"
     },
     {
       "id": "id",
-      "content": "Testando novamente",
-      "created_At": "2024-02-08 19:59:01.767953",
-      "updated_At": "2024-02-08 19:59:01.767962"
+      "content": "Testando a chamada do refresh",
+      "created_At": "2024-02-09 14:40:46.340053",
+      "updated_At": "2024-02-09 14:40:46.340063"
     }
   ]
 }
