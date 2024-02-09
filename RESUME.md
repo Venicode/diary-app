@@ -28,15 +28,7 @@
 
 ## CRIANDO UMA REQUISIÇÃO GET
 
-import 'package:http/http.dart' as http;
-
-Future<void> getFilmes() async {
-
- final response = await http.get(Uri.parse(
-      'https://raw.githubusercontent.com/alura-cursos/obtendo_dados_com_flutter_http/main/filmes.json'));
-
-print(response.body);
-}
+![alt text](image-2.png)
 
 - No código acima criamos uma função assíncrona pois precisamos utilizar o await já que a requisição pode demorar para retornar e precisamos dela para continuar o código, e como os dados não irão aparecer de forma instântanea, precisamos declarar que o retorno dele é um Future do tipo void e não apenas void. Utilizamos void pois iremos apenas printar o conteúdo no console da IDE. 
 
