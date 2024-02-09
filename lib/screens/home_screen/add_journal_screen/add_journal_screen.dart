@@ -36,6 +36,8 @@ class AddJournalScreen extends StatelessWidget {
     );
   }
 
+//Pega o conteúdo do diário e utiliza o método registro do JournalSevice
+//Depois disso retorna pra tela inicial passando um novo context e o value
   registerJournal(BuildContext context) {
     String content = _contentcontroller.text;
     journal.content = content;

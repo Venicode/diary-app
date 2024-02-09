@@ -4,6 +4,7 @@ class WeekDay {
   late String short;
   late String long;
 
+//Pegando o weekday em Ingles, transforma em Portugues e gera as abreviaçõ~es forma longa
   WeekDay(this.date) {
     int weekDay = date.weekday;
     switch (weekDay) {
@@ -37,7 +38,6 @@ class WeekDay {
         break;
     }
   }
-  //Código suprimido
 
 @override
 String toString() {

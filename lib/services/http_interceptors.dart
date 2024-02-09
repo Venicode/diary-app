@@ -1,6 +1,7 @@
 import 'package:http_interceptor/http_interceptor.dart';
 import 'package:logger/logger.dart';
 
+//Personalizando os logs para requisições e respostas baseados nos status code
 class LoggingInterceptor implements InterceptorContract {
   Logger logger = Logger();
   @override
