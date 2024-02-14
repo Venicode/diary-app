@@ -6,7 +6,7 @@ import '../models/journal.dart';
 
 class JournalService {
   //url de onde esta rodando o servidor
-  static const String url = 'http://192.168.0.10:3000/';
+  static const String url = 'http://192.168.41.134:3000/';
   //resource do arquivo db.json (um endpoint do servidor)
   static const String resource = 'journals/';
 
@@ -33,6 +33,7 @@ class JournalService {
     } //caso ao contrário, retorna false
     return false;
   }
+
 //MÉTODO GET -> Pega os dados do json e transforma em lista
   Future<List<Journal>> getAll() async {
     http.Response response = await client.get(Uri.parse(getUrl()));
@@ -45,5 +46,16 @@ class JournalService {
       list.add(Journal.fromMap(jsonMap));
     }
     return list;
+  }
+//MÉTODO PUT: ATUALIZA OS DADOS
+  Future<bool> edit(String id, Journal journal) async {
+    String jsonJournal = json.encode(journal.toMap());
+    http.Response response = await client.put(Uri.parse("${getUrl()}$id"),
+        headers: {'Content-type': 'application/json'}, body: jsonJournal);
+
+    if (response.statusCode == 200) {
+      return true;
+    }
+    return false;
   }
 }

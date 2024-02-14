@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_webapi_first_course/helpers/weekday.dart';
-import 'package:flutter_webapi_first_course/models/journal.dart';
 import 'package:uuid/uuid.dart';
+import '../../../helpers/weekday.dart';
+import '../../../models/journal.dart';
+import '../../add_journal_screen/add_journal_screen.dart';
 
 class JournalCard extends StatelessWidget {
   final Journal? journal;
   final DateTime showedDate;
   final Function refresh;
-  const JournalCard({Key? key, this.journal, required this.showedDate, required this.refresh})
-      : super(key: key);
+  const JournalCard({
+    Key? key,
+    this.journal,
+    required this.showedDate,
+    required this.refresh,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     if (journal != null) {
       return InkWell(
-        onTap: () {},
+        onTap: () {
+         callAddJournalScreen(context, journal: journal);
+        },
         child: Container(
           height: 115,
           margin: const EdgeInsets.all(8),
@@ -96,22 +103,43 @@ class JournalCard extends StatelessWidget {
       );
     }
   }
+callAddJournalScreen(BuildContext context, {Journal? journal}) {
+    Journal internalJournal = Journal(
+        id: const Uuid().v1(),
+        content: "",
+        createdAt: showedDate,
+        updatedAt: showedDate);
 
-  callAddJournalScreen(BuildContext context) {
+    if (journal != null) {
+      internalJournal = journal;
+    }
+
+    Map<String, dynamic> map = {
+      'journal': internalJournal,
+      'is_editing': journal != null
+    };
+
     Navigator.pushNamed(
       context,
-      "add-journal",
-      arguments: Journal(
-          id: const Uuid().v1(),
-          content: "",
-          createdAt: showedDate,
-          updatedAt: showedDate),
+      'add-journal',
+      arguments: map,
     ).then((value) {
-      if (value != null && value == true) {
-        ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text("Registro feito com sucesso")));   
-      }
       refresh();
+
+      if (value == DisposeStatus.success) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text("Registro salvo com sucesso."),
+          ),
+        );
+      } else if (value == DisposeStatus.error) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text("Houve uma falha ao registar."),
+          ),
+        );
+      }
     });
   }
+ 
 }

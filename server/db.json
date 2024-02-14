@@ -4,34 +4,16 @@
   },
   "journals": [
     {
-      "id": "id",
-      "content": "Hoje e sexta",
-      "created_At": "2024-02-09 14:00:38.125375",
-      "updated_At": "2024-02-09 14:00:38.125384"
+      "id": "5910ac10-cb6e-11ee-8a60-613a6dbffe01",
+      "content": "Oi, tudo bem",
+      "created_At": "2024-02-10 19:22:01.842004",
+      "updated_At": "2024-02-10 19:22:01.842004"
     },
     {
-      "id": "id",
-      "content": "Testando",
-      "created_At": "2024-02-09 14:28:34.701911",
-      "updated_At": "2024-02-09 14:28:34.701919"
-    },
-    {
-      "id": "id",
-      "content": "Testando a chamada do refresh",
-      "created_At": "2024-02-09 14:40:46.340053",
-      "updated_At": "2024-02-09 14:40:46.340063"
-    },
-    {
-      "id": "id",
-      "content": "Sobrescrevendo",
-      "created_At": "2024-02-09 15:11:34.364166",
-      "updated_At": "2024-02-09 15:11:34.364186"
-    },
-    {
-      "id": "id",
-      "content": "Sobrescrevendo a sexta",
-      "created_At": "2024-02-09 15:24:52.702588",
-      "updated_At": "2024-02-09 15:24:52.702604"
+      "id": "bed4c400-cb6e-11ee-8156-97ad31311e9a",
+      "content": "Olá tudo bem",
+      "created_At": "2024-02-05 19:24:58.666184",
+      "updated_At": "2024-02-05 19:24:58.666184"
     }
   ]
 }
