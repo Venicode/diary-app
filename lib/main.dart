@@ -2,13 +2,9 @@ import 'package:flutter/material.dart';
 import 'models/journal.dart';
 import 'screens/add_journal_screen/add_journal_screen.dart';
 import 'screens/home_screen/home_screen.dart';
-import 'services/journal_service.dart';
 
 void main() {
   runApp(const MyApp());
-   JournalService service = JournalService();
-  //service.register(Journal.empty());
-  service.getAll();
 }
 
 class MyApp extends StatelessWidget {
@@ -34,16 +30,15 @@ class MyApp extends StatelessWidget {
       routes: {
         "home": (context) => const HomeScreen(),
       },
-      onGenerateRoute: (settings) {
-        if (settings.name == "add-journal") {
-          Map<String,dynamic> map = settings.arguments as Map<String,dynamic>;
-          final Journal journal = map["journal"] as Journal;
-          final bool isEditing = map["is_editing"];
+      onGenerateRoute: (routeSettings) {
+        if (routeSettings.name == "add-journal") {
+          final map = routeSettings.arguments as Map<String, dynamic>;
           return MaterialPageRoute(
             builder: (context) {
               return AddJournalScreen(
-              journal: journal, 
-              isEditing:isEditing);
+                journal: map["journal"] as Journal,
+                isEditing: map["is_editing"],
+              );
             },
           );
         }

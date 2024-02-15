@@ -4,16 +4,16 @@
   },
   "journals": [
     {
-      "id": "5910ac10-cb6e-11ee-8a60-613a6dbffe01",
-      "content": "Oi, tudo bem",
-      "created_At": "2024-02-10 19:22:01.842004",
-      "updated_At": "2024-02-10 19:22:01.842004"
+      "id": "50795e40-cc08-11ee-b6d4-c14de95cb906",
+      "content": "Esta chovendo",
+      "created_At": "2024-02-15 13:35:06.204971",
+      "updated_At": "2024-02-15 13:35:06.204971"
     },
     {
-      "id": "bed4c400-cb6e-11ee-8156-97ad31311e9a",
-      "content": "Olá tudo bem",
-      "created_At": "2024-02-05 19:24:58.666184",
-      "updated_At": "2024-02-05 19:24:58.666184"
+      "id": "57e193f0-cc08-11ee-b6d4-c14de95cb906",
+      "content": "Hoje e quarta",
+      "created_At": "2024-02-14 13:35:06.204971",
+      "updated_At": "2024-02-14 13:35:06.204971"
     }
   ]
 }
