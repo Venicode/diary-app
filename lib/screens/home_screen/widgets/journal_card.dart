@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_webapi_first_course/screens/commom/confirmation_dialog.dart';
 import 'package:flutter_webapi_first_course/services/journal_service.dart';
 import 'package:uuid/uuid.dart';
 import '../../../helpers/weekday.dart';
@@ -84,7 +85,9 @@ class JournalCard extends StatelessWidget {
                 ),
               ),
               IconButton(
-                  onPressed: (){removeJournal(context);},
+                  onPressed: () {
+                    removeJournal(context);
+                  },
                   icon: const Icon(Icons.delete))
             ],
           ),
@@ -150,14 +153,23 @@ class JournalCard extends StatelessWidget {
   removeJournal(BuildContext context) {
     JournalService service = JournalService();
     if (journal != null) {
-      service.delete(journal!.id).then((value) {
-        if (value) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text("Removido com sucesso!"),
-            ),
-          );
-          refresh();
+      showConfirmationDialog(context,
+              content: "Deseja realmente deletar essa anotação?",
+              affirmativeOption: "Remover")
+          .then((value) {
+        if (value != null) {
+          if (value) {
+            service.delete(journal!.id).then((value) {
+              if (value) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text("Removido com sucesso!"),
+                  ),
+                );
+                refresh();
+              }
+            });
+          }
         }
       });
     }

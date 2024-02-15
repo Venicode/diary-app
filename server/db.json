@@ -4,14 +4,20 @@
   },
   "journals": [
     {
-      "id": "50795e40-cc08-11ee-b6d4-c14de95cb906",
-      "content": "Esta chovendo",
+      "id": "6f7c9940-cc0a-11ee-b6d4-c14de95cb906",
+      "content": "hoje e quinta e esta chovendo",
       "created_At": "2024-02-15 13:35:06.204971",
       "updated_At": "2024-02-15 13:35:06.204971"
     },
     {
-      "id": "57e193f0-cc08-11ee-b6d4-c14de95cb906",
-      "content": "Hoje e quarta",
+      "id": "7c2f2db0-cc0a-11ee-b6d4-c14de95cb906",
+      "content": "dia de descanso",
+      "created_At": "2024-02-11 13:35:06.204971",
+      "updated_At": "2024-02-11 13:35:06.204971"
+    },
+    {
+      "id": "86480470-cc0a-11ee-b6d4-c14de95cb906",
+      "content": "dia de voltar a trabalhar",
       "created_At": "2024-02-14 13:35:06.204971",
       "updated_At": "2024-02-14 13:35:06.204971"
     }
